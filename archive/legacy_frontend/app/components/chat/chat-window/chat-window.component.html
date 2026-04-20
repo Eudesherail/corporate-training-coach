@@ -1,0 +1,26 @@
+<div class="chat-window" [ngClass]="{'shown': isChatOpen(), 'full-screen': isFullScreen}" #overlayTarget>
+    <app-chat-header (closeChat)="toggleChat()" (changeSize)="changeWindowSize()"></app-chat-header>
+    <div class="chat-window-messages">
+        <app-chat-message
+                *ngFor="let message of messages"
+                [messageText]="message.text"
+                [messageTime]="message.time"
+                [messageHasVideo]="message.hasVideo"
+                [messageVideo]="message.video"
+                [messageImage]="message.image"
+                [messageButtons]="message.buttons"
+                [isUser]="message.isUser"
+                (buttonClick)="handleButtonClick($event)"
+        ></app-chat-message>
+        <app-chat-message
+                *ngIf="isTyping"
+                [messageText]="'schreibt...'"
+                [isUser]="false"
+                (buttonClick)="handleButtonClick($event)"
+        ></app-chat-message>
+    </div>
+   
+    <app-chat-user-input (sendUserInput)="addMessage($any($event))" [isOpen]="isChatOpen()"></app-chat-user-input>
+</div>
+<app-chat-button (clicked)="toggleChat()" [isOpen]="isChatOpen()" [ngClass]="{'shown': !isChatOpen()}"></app-chat-button>
+<i class="bi bi-0-circle"></i>

@@ -1,0 +1,79 @@
+.message {
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.message--user {
+  justify-content: flex-end;
+}
+
+.message__content {
+  display: flex;
+  flex-direction: column;
+  max-width: 90%;
+}
+
+.message__text {
+  border-radius: 0 20px 20px 20px;
+  padding: 8px 16px;
+  margin-bottom: 0;
+  color: black;
+  background-color: var(--stubu-white);
+}
+
+.message--user .message__text {
+  color: black;
+  background-color: var(--stubu-chat-bubble);
+  border-radius: 20px 0 20px 20px;
+  word-break: break-word;
+}
+
+.message__info {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 8px; /* Hinzufügen von Abstand zwischen Text und Zeitstempel */
+}
+
+.message--user .message__info {
+  justify-content: flex-end; /* Nachrichtenzeitstempel rechts ausrichten, wenn sie vom Benutzer stammen */
+}
+
+.message__time {
+  font-size: 10px;
+  color: #808080;
+  font-style: italic; /* Kursivschriftstil hinzufügen */
+  text-align: left; /* Links ausrichten, wenn die Nachricht nicht vom Benutzer stammt */
+}
+
+.message__image {
+  max-width: 100%;
+  max-height: 300px; /* Du kannst die Höhe anpassen, je nachdem, wie groß du das Bild haben möchtest */
+  object-fit: contain; /* Behält das Seitenverhältnis bei und stellt sicher, dass das gesamte Bild angezeigt wird */
+  border-radius: 8px;
+}
+
+.message__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.message__button {
+  background-color: var(--stubu-accent);
+  color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 8px 16px;
+}
+
+.message__button:hover {
+  background-color: var(--stubu-accent-light);
+}
+
+.message__video {
+  height: fit-content;
+  width: fit-content;
+}

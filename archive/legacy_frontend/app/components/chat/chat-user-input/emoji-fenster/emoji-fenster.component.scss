@@ -1,0 +1,45 @@
+.overlay {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    overflow: hidden;
+    bottom: 12%;
+    right: 3%;
+    width: 350px;
+    height: 475px;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 99999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0;
+    border-radius: 5px;
+  }
+  @media screen and (max-width: 1360px) {
+    .overlay {
+        bottom: 12%;
+        right: 6%;
+      }
+  }
+  @media screen and (max-width: 568) {
+    .overlay {
+        bottom: 17%;
+        right: 6%;
+      }
+  }
+  .close {
+    text-align:end;
+    background-color: var(--stubu-accent);
+    color: white;
+  }
+  i {
+    cursor: pointer;
+    padding: 5px;
+  }
+
+  .popup {
+    background-color: #fff;
+    border-radius: 0px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 0;
+  }

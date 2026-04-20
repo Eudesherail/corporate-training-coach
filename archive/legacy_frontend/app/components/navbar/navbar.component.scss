@@ -1,0 +1,58 @@
+.custom-navbar {
+  background: var(--stubu-dark);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+
+  i {
+    margin-left: 6px;
+  }
+
+  a {
+    cursor: pointer;
+  }
+
+  .navbar-brand {
+    font-size: 1.15rem;
+    font-weight: bold;
+    margin-right: 20px;
+  }
+
+  .link-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 20px;
+    }
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.small-mode {
+  display: inline-block;
+}
+
+@media screen and (max-width: 500px) {
+  .small-mode {
+    display: none;
+  }
+}

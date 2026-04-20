@@ -1,0 +1,19 @@
+<div class="center-wrapper">
+    <div class="form-group">
+        <div class="change-username">
+            Dein Benutzername
+            <input placeholder="Benutzername" type="text" class="form-control" [(ngModel)]="username" maxlength="20">
+        </div>
+        <div class="avatar-selection">
+            Dein Avatar
+            <app-avatar-carousel class="carousel" [(avatarName)]="avatarName"></app-avatar-carousel>
+        </div>
+        <div class="delete-message-history">
+            <button class="btn btn-danger form-control" (click)="deleteMessageHistory()">Chatverlauf löschen</button>
+        </div>
+        <div class="submit-group">
+            <button class="btn btn-primary" (click)="saveUserConfig()">Speichern</button>
+            <button class="btn btn-secondary" (click)="cancel()">Abbrechen</button>
+        </div>
+    </div>
+</div>

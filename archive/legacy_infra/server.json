@@ -1,0 +1,18 @@
+{
+    "Servers": {
+      "1": {
+        "Name": "Meine Datenbank",
+        "Group": "Server Group",
+        "Host": "db",
+        "Port": 5432,
+        "MaintenanceDB": "postgres",
+        "Username": "postgres",
+        "Password": "postgres",
+        "SSLMode": "prefer",
+        "PassFile": "false",
+        "DiscoveryId": "",
+        "UseSSHTunnel": 0
+      }
+    }
+  }
+  

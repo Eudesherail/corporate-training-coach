@@ -1,0 +1,38 @@
+<div class="admin-upload-container">
+    <div class="admin-upload-description">
+        <h2>
+            Hochladen von Lerninhalten
+        </h2>
+        <p>
+            Laden Sie Dateien im Pdf-Format hoch, um diese dem Study Buddy als Wissensbasis zur Verfügung zu stellen
+        </p>
+    </div>
+    <div class="upload-container">
+        <form [formGroup]="dokumentDaten" class="form-container" (ngSubmit)="onSubmit()">
+            <p class="input-description" for= "institution">
+                Wählen Sie Ihre Institution
+            </p>
+            <select formControlName="institution" class="input-field">
+                <option *ngFor="let institution of institutions" [value]="institution">{{ institution }}</option>
+            </select>
+
+            <p class="input-description" for ="modul">
+                Name des Moduls
+            </p>
+            <input formControlName="modul" class="input-field" type="text" placeholder="Bsp.: Service-Informationssysteme">
+
+            <p class="input-description" for ="description">
+                Beschreibung der Datei
+            </p>
+            <textarea formControlName="description" class="input-field" rows="4" placeholder="Eine kurze Erläuterung der Inhalte dieser Datei"></textarea>
+
+            <input formControlName="document" class="file-input" type="file" accept=".pdf" (change)="onFileSelected($event)"> 
+
+            <button type="submit" class="submit-button">
+                Hochladen
+            </button>
+        </form>
+    </div>
+</div>
+
+

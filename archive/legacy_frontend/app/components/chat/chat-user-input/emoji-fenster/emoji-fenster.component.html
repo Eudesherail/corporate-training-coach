@@ -1,0 +1,12 @@
+<div class="overlay">
+    <div class="popup">
+        <div class="close">
+        <i class="fa fa-close" (click)="onCloseClick()"></i>
+    </div>
+    <br /><emoji-mart
+    class="emoji-mart"
+    *ngIf="EmojisVisible"
+    (emojiSelect)="addEmoji($event)"
+    ></emoji-mart>
+    </div>
+  </div>

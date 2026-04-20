@@ -1,0 +1,12 @@
+/*create a color palette to be used in other css files*/
+
+:root {
+    --stubu-primary: #256171;
+    --stubu-primary-dark: #1B454F;
+    --stubu-primary-light: #4FB6A9;
+    --stubu-accent: #f7652D;
+    --stubu-accent-light: #f68255;
+    --stubu-white: #dcdcdc;
+    --stubu-chat-bubble: #88F72D;
+    --stubu-dark: #23252F;
+}

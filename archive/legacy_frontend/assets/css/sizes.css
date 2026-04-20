@@ -1,0 +1,8 @@
+:root {
+    --stubu-browser-height: calc(100vh - 60px);
+    --stubu-browser-height-full: 100vh;
+    --stubu-browser-width: 100vw;
+    --stubu-breakpoint-sm: 550px;
+    --stubu-breakpoint-md: 768px;
+    --stubu-breakpoint-lg: 1060px;
+}

@@ -1,0 +1,50 @@
+.footer {
+  height: auto;
+  width: 100%;
+  background: var(--stubu-dark);
+  padding: 50px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10%;
+
+
+  .about-us {
+    height: fit-content;
+    width: 50%;
+
+    p {
+      height: fit-content;
+      width: 100%;
+      text-align: justify;
+      margin: 0;
+    }
+  }
+
+  .link-tree {
+    list-style-type: none;
+    padding: 0;
+
+    li {
+      margin-bottom: 5px;
+
+      a {
+        color: var(--stubu-white);
+        text-decoration: none;
+
+        &:hover {
+          color: var(--stubu-primary-light);
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 780px) {
+    .about-us {
+      width: 100%;
+      margin-bottom: 50px;
+    }
+  }
+}

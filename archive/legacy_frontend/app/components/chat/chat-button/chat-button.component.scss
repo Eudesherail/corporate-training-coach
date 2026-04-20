@@ -1,0 +1,41 @@
+.chatbot-button {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  background-color: var(--stubu-accent);
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  border: 2px solid var(--stubu-accent);
+  filter: drop-shadow(2px 2px 1px #121212);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  z-index: 111;
+  
+  &:hover {
+    background-color: var(--stubu-accent-light);
+  }
+  
+  img {
+    padding-top: 3px;
+    width: 55px;
+    height: 55px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .chatbot-button {
+    bottom: 25px;
+    right: 25px;
+    width: 60px;
+    height: 60px;
+    
+    img {
+      width: 40px;
+      height: 45px;
+    }
+  }
+}

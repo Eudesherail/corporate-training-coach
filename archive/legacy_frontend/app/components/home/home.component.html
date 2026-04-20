@@ -1,0 +1,41 @@
+<div class="home-container">
+    <div class="left-side">
+        <div class="welcome-message">
+            <h2>Willkommen, <span>{{ username }}!</span></h2>
+            <p *ngIf="!showFirstTimeMessage">Willkommen bei StudyBuddy, dein Companion für die berufliche
+                Weiterbildung.</p>
+            <p *ngIf="showFirstTimeMessage">Bereit, deine Lernreise zu beginnen? Ich stehe dir gerne zur Seite, um
+                Lernstrategien zu entwickeln und gemeinsam effektiv zu lernen. Lege jetzt gemeinsam mit dem StudyBuddy
+                dein individuelles Ziel fest! Du findest den StudyBuddy unten rechts in der Ecke. 📚</p>
+        </div>
+        <div class="goal-image" *ngIf="!showFirstTimeMessage">
+            <img src="assets/img/goal.png" alt="Dein >aktuelles smartes Ziel ist:">
+            <p>{{ goal }}</p>
+        </div>
+        <div class="goal-image" *ngIf="!showFirstTimeMessage">
+            <img src="assets/img/goal-time.png" alt="Tage bis du dein Ziel erreicht haben willst:">
+            <p>{{ daysLeft }} Tage</p>
+        </div>
+
+    </div>
+    <div class="right-side">
+        <div class="meet-stubu">
+            <h1>MEET</h1>
+            <h1><span>STUBU</span></h1>
+            <p>DEIN VIRTUELLER</p>
+            <p>LERNPARTNER</p>
+        </div>
+        <img [src]="'assets/avatars/'+avatarName+'.png'" alt="StudyBuddy Avatar" class="avatar-display" (click)="openChat()">
+    </div>
+
+    <div class="bottom-right">
+        <div class="survey">
+            <p>Der StudyBuddy befindet sich noch in Entwicklung, es können Fehler auftreten und einige Aussagen können
+                unvollständig und inkorrekt sein. Hilf uns indem du unseren Fragebogen ausfüllst oder Feedback hinterlässt:</p>
+            <a href="http://befragung.akad.de/s/mv74jn7"
+               target="_blank">Zum Fragebogen</a>
+            <a href="https://docs.google.com/document/d/1EyOtItmFW0yz9Z_j-gFgoaa1X9T5UVTEfehFdJ4aVPA/edit?usp=sharing"
+               target="_blank">Zum Google Doc</a>
+        </div>
+    </div>
+</div>

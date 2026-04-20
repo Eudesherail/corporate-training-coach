@@ -1,0 +1,51 @@
+<div class="login-center">
+    <form class="form-group">
+        <!-- Eingabefelder -->
+        <div class="mb-3">
+            <label for="email">E-Mail</label>
+            <input type="email"
+                   class="form-control"
+                   id="email"
+                   name="email"
+                   placeholder="Email"
+                   [(ngModel)]="email"
+                   required>
+        </div>
+        <div class="mb-3">
+            <label for="password">Passwort</label>
+            <input type="password"
+                   class="form-control"
+                   id="password"
+                   name="password"
+                   placeholder="Password"
+                   [(ngModel)]="password"
+                   required>
+        </div>
+
+        <!-- Normale Anmeldeschaltflächen -->
+        <div class="login mb-3">
+            <button type="submit" class="btn btn-primary me-2" (click)="signin()">Anmelden</button>
+            <button type="button" class="btn btn-secondary">Registrieren</button><br>
+        </div>
+        <p>Registrierung derzeit geschlossen.</p>
+
+        <hr>
+
+        <!-- Social/OAuth2 Login-Tasten -->
+        <p>Anmelden mit</p>
+        <div class="social-login-buttons">
+            <!-- <button type="button" class="btn btn-light me-2" (click)="startOAuth2Login(OAuthState.MICROSOFT)" disabled>
+                Microsoft <i class="fa fa-windows"></i>
+            </button>
+            <button type="button" class="btn btn-light" (click)="startOAuth2Login(OAuthState.GITHUB)">
+                GitHub <i class="fa fa-github"></i>
+            </button> -->
+            <button type="button" class="btn btn-light me-2" (click)="startOAuth2Login(OAuthState.INVITE)">
+                INVITE
+            </button>
+            <!-- <button type="button" class="btn btn-light me-2" disabled>
+                Mein Bildungsraum
+            </button> -->
+        </div>
+    </form>
+</div>

@@ -1,0 +1,7 @@
+<div class="input-group">
+    <div (keyup.enter)="onSubmit()" class="container-comment">
+        <textarea #focusMe [(ngModel)]="userInput" (input)="adjustLineHeight($event)" placeholder="Eine Nachricht schreiben..."></textarea>
+        <button class="emoji-picker" (click)="openOverlay()" id="overlayTarget">😀</button>
+        <button class="btn input-group-append" type="button" [disabled]="!userInput" (click)="onSubmit()">Send</button>
+    </div>
+</div>

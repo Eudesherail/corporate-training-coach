@@ -1,0 +1,47 @@
+.navbar {
+  background-color: var(--stubu-accent);
+  color: white;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  .image-container {
+    height: 100%;
+    width: 28px;
+    justify-content: center;
+
+    .avatar-background {
+      display: block;
+      height: 28px;
+      width: 28px;
+      background-color: white;
+      border-radius: 50%;
+    }
+
+    .avatar-icon {
+      display: block;
+      position: relative;
+      left: 50%;
+      transform: translate(-50%, -28px);
+      height: 100%;
+    }
+  }
+
+  .chatbot-name {
+    height: 100%;
+    font-weight: bold;
+    line-height: 2em;
+  }
+
+  .chat-settings {
+    display: flex;
+
+    .hitbox {
+      padding: 5px 11px;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+<div class="custom-navbar">
+    <a class="navbar-brand" href="#">Study Buddy</a>
+    <div class="link-bar">
+        <ul class="links">
+            <li class="nav-item" [ngClass]="{'hidden': !isLoggedIn()}">
+                <a class="nav-link" routerLink="/goal-editor">Lernziel</a>
+            </li>
+            <li class="nav-item" [ngClass]="{'hidden': !isLoggedIn() || !this.is_superuser }">
+                <a class="nav-link" routerLink="/admin-bereich">Dateiverwaltung</a>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/informations">Informationen</a>
+            </li>
+        </ul>
+        <ul class="links">
+            <li class="nav-item" [ngClass]="{'hidden': isLoggedIn()}">
+                <a class="nav-link" routerLink="/login">Login</a>
+            </li>
+            <li class="nav-item" [ngClass]="{'hidden': !isLoggedIn()}">
+                <a class="nav-link" routerLink="/settings">
+                    <span class="small-mode">Einstellungen</span>
+                    <i class="fa fa-gear"></i>
+                </a>
+            </li>
+            <li class="nav-item" [ngClass]="{'hidden': !isLoggedIn()}">
+                <a class="nav-link" (click)="logout()">
+                    <span class="small-mode">Abmelden</span>
+                    <i class="fa fa-sign-out"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

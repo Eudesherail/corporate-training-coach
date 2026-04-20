@@ -1,0 +1,14 @@
+<ngb-carousel *ngIf="images"
+              [wrap]="true"
+              [showNavigationArrows]="true"
+              [showNavigationIndicators]="true"
+              [interval]=9999999999999
+              [pauseOnFocus]="true"
+              [pauseOnHover]="true"
+              [animation]="false"
+              (slide)="onSlide($event)"
+[activeId]="activeId">
+    <ng-template *ngFor="let image of images; let i = index" ngbSlide [id]="''+i">
+        <img [src]="images[i]" class="avatar-display" alt="Stubu Avatar Design {{i}}"/>
+    </ng-template>
+</ngb-carousel>

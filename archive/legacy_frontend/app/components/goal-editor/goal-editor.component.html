@@ -1,0 +1,25 @@
+<div class="content-center">
+    <div class="content-wrapper">
+        <div class="content" *ngIf="goalEditMode">
+            <label for="goal-description">Lernziel</label>
+            <textarea class="form-control" id="goal-description" placeholder="Ich möchte..."
+                      [(ngModel)]="goal"></textarea>
+            <label>Bis wann?</label>
+            <div class="date-wrapper">
+                <input class="form-control" name="dp" [(ngModel)]="endDate" ngbDatepicker #d="ngbDatepicker"/>
+                <button class="btn btn-primary" (click)="d.toggle()" type="button">
+                    <i class="fa fa-calendar"></i>
+                </button>
+            </div>
+            <br>
+            <div class="submit-buttons">
+                <button class="btn btn-primary" (click)="editGoal()">Speichern</button>
+                <button class="btn btn-secondary" (click)="cancelGoal()">Abbrechen</button>
+            </div>
+        </div>
+        <div class="no-content" *ngIf="!goalEditMode">
+            <h1>Du hast noch kein Lernziel erstellt.</h1>
+            <button class="btn btn-primary" (click)="goalEditMode = !goalEditMode">Neues Lernziel</button>
+        </div>
+    </div>
+</div>

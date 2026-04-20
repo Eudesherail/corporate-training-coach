@@ -1,0 +1,66 @@
+.center-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  p, label {
+    margin: 0 0 5px 0;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 20px;
+    width: 80%;
+    gap: 25px;
+    justify-content: center;
+    background: var(--stubu-dark);
+    border: 1px solid var(--stubu-dark);
+    border-radius: 5px;
+    box-shadow: 6px 6px 12px 0 #171717;
+    -webkit-box-shadow: 6px 6px 12px 0 #171717;
+    -moz-box-shadow: 6px 6px 12px 0 #171717;
+
+    .form-control {
+      width: 60%;
+    }
+
+    .delete-message-history, .avatar-selection, .change-username {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .submit-group {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+
+      .btn-primary {
+        background-color: var(--stubu-primary-light);
+        border-color: var(--stubu-primary-light);
+        color: var(--stubu-dark);
+        flex: 1;
+      }
+
+      .btn-secondary {
+        flex: 1;
+      }
+    }
+
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .form-group {
+    width: 90%;
+    
+    .form-control {
+      width: 100%;
+    }
+  }
+}

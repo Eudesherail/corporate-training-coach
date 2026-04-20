@@ -1,0 +1,74 @@
+<div class="admin-edit-container">
+    <div class="admin-edit-description">
+        <h2>
+            Bearbeiten von hochgeladenen Dateien
+        </h2>
+        <p>
+            Bereits hochgeladene Dateien können hier angesehen werden und die 
+            dazugehörigen Angaben können bearbeitet werden
+        </p>
+    </div>
+
+    <div class="edit-container">
+        <div class="edit-table">
+        
+            <table>
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Institution</th>
+                        <th>Modulname</th>
+                        <th>Beschreibung</th>
+                        <th>Dokument</th>
+                        <th>Aktionen</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <ng-container *ngFor="let document of documents">
+                        <tr>
+                            <td class="td-normal">{{document.id}}</td>
+                            <td class="td-normal">{{document.institution}}</td>
+                            <td class="td-normal">{{document.modul}}</td>
+                            <td class="td-normal">{{document.description | slice:0:50}}</td>
+                            <td class="td-normal">{{document.name}}</td>
+                            <td class="table-buttons">
+                                <button class="action-button" (click)="showDocument(document)"><i class="gg-eye"></i></button>
+                                <button class="action-button" (click)="editDocument(document)"><i class="gg-pen"></i></button>
+                                <button class="action-button" (click)="deleteDocuments(document.id)"><i class="gg-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr *ngIf="isFileSelected && selectedId == document.id">
+                            <td class="td-normal" colspan="6">
+                                <form [formGroup]="dokumentDaten" class="form-container" (ngSubmit)="onSubmit(document)">
+                                    <p>
+                                        Institution
+                                    </p>
+                                    <select *ngIf="selectEdit"  formControlName="institution" name="institution" class="input-field">
+                                        <option value="" disabled selected>Bitte wählen Sie eine Institution</option>
+                                        <option *ngFor="let institution of institutions" [value]="institution">{{ institution }}</option>
+                                    </select>
+                                    <input *ngIf="!selectEdit" formControlName="institution" type="text" class="input-field">
+                                    <p>
+                                        Name des Moduls
+                                    </p>
+                                    <input formControlName="modul" class="input-field" name="modul" type="text"  >
+                                    
+                                    <p>
+                                        Beschreibung
+                                    </p>
+                                    <textarea formControlName="description" name="description" class="input-field" rows="4" >
+                                    </textarea>
+
+                                    <button *ngIf="selectEdit" type="submit" class="submit-button">
+                                        Speichern
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                    </ng-container>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,104 @@
+.admin-container {
+    background-image: url("../../../assets/img/background_large.png");
+    background-attachment: local;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: var(--stubu-browser-height);
+    width: 100%;
+    font-size: 22px;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .admin-description {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        h2 {
+            padding-top: 20px;
+            color: var(--stubu-primary-light);
+            font-weight: bold;
+        }
+
+        p {
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+    }
+
+    .menu-container {
+        width: 70vw;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        align-items: stretch;
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 1px solid var(--stubu-primary-light);
+            border-radius: 5px;
+            padding: 20px;
+            gap: 10px;
+            width: 40%;
+            justify-content: space-between;
+
+            background: var(--stubu-dark);
+            border: 1px solid var(--stubu-dark);
+            border-radius: 5px;
+            box-shadow: 6px 6px 12px 0 #171717;
+
+            .select-description {
+                font-size: 16px;
+                text-align: justify;
+            }
+        }
+
+        button {
+            background-color: var(--stubu-primary-light);
+            border-color: var(--stubu-primary-light);
+            color: var(--stubu-dark);
+            max-height: 40px;
+            width: 150px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .select-title {
+            text-align: center;
+        }
+    }
+
+    @media only screen and (max-width: 767px) {
+        
+        .admin-description {
+            h2 {
+                text-align: center;
+            }
+    
+            p {
+                font-size: 18px;
+                padding-left: 20px;
+                padding-right: 20px;
+                text-align: justify;
+            }
+        }
+        
+        .menu-container {
+            flex-direction: column;
+            width: 100vh;
+            align-items: center;
+            padding: 10px;
+
+            .button-container {
+                width: 50%;
+            }
+        }
+    }
+}

@@ -1,0 +1,116 @@
+.admin-upload-container {
+    background-image: url("../../../../assets/img/background_large.png");
+    background-attachment: local;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    min-height: var(--stubu-browser-height);
+    width: 100%;
+    font-size: 22px;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    .admin-upload-description {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        h2 {
+            padding-top: 20px;
+            color: var(--stubu-primary-light);
+            font-weight: bold;
+        }
+
+        p {
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+    }
+
+    .upload-container {
+        width: 60vw;
+        padding: 20px;
+        background: var(--stubu-dark);
+        border: 1px solid var(--stubu-dark);
+        border-radius: 5px;
+        box-shadow: 6px 6px 12px 0 #171717;
+        -webkit-box-shadow: 6px 6px 12px 0 #171717;
+        -moz-box-shadow: 6px 6px 12px 0 #171717;
+
+        p {
+            margin: 0;
+        }
+    }
+
+    @media only screen and (max-width: 767px) {
+
+        .admin-upload-description {
+            h2 {
+                text-align: center;
+            }
+
+            p {
+                font-size: 18px;
+                padding-left: 20px;
+                padding-right: 20px;
+                text-align: justify;
+            }
+        }
+        
+        .upload-container {
+            width: 90vw;
+        }
+    }
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20%;
+    margin-right: 20%;
+
+    font-size: 18px;
+    
+    .input-description {
+        align-self: flex-start;
+        margin: auto;
+    }
+
+    .input-field {
+        margin-bottom: 20px;
+    }
+
+    .file-input {
+        font-size: 14px;
+        align-self: center;
+        margin-bottom: 20px;
+    }
+
+    .submit-button {
+        align-self: center;
+
+        background-color: var(--stubu-accent);
+        color: white;
+        height: 40px;
+        width: 150px;
+        border: var(--stubu-accent);
+        border-radius: 10px;
+    }
+    
+    .invalid-label {
+        color: red;
+    }
+    
+}
+
+@media only screen and (max-width: 767px) {
+    
+    .form-container {
+        margin-left: 5%;
+        margin-right:  5%;
+    }
+}
+

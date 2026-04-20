@@ -1,0 +1,17 @@
+<div class="message" [ngClass]="{'message--user': isUser}">
+  <div class="message__content">
+    <p class="message__text" >
+      <iframe *ngIf="messageHasVideo" [src]="messageVideo"  alt="YouTube-Thumbnail" class="message__video"></iframe>
+      <span [innerHTML]="messageText">{{ messageText }}</span>
+      <img *ngIf="messageImage" [src]="messageImage" class="message__image" alt="Bildnachricht" />
+    </p>
+    <div class="message__info">
+      <span class="message__time">{{ messageTime }}</span>
+    </div>
+    <div *ngIf="messageButtons && messageButtons.length > 0" class="message__buttons">
+      <button *ngFor="let button of messageButtons" class="message__button" (click)="onButtonClick(button)">
+        {{ button.title }}
+      </button>
+    </div>
+  </div>
+</div>
