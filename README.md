@@ -12,7 +12,7 @@ This repository is intended as a clear, working foundation for a corporate train
 ## Quick Start
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/Eudesherail/corporate-training-coach.git
 cd corporate-training-coach
 docker compose up --build
 ```
