@@ -128,7 +128,7 @@ Compatibility note:
 
 ```bash
 cd backend
-python -m venv .venv
+python3.11 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 cp ../.env.example .env
@@ -136,6 +136,12 @@ uvicorn main:app --reload
 ```
 
 Backend runs on `http://localhost:8000`.
+
+Fresh-clone note:
+
+- Use `python3.11` explicitly for backend setup.
+- `.env.example` only contains settings accepted by the FastAPI config.
+- The backend now creates the SQLite `app/data` directory automatically on first startup.
 
 ### Frontend
 

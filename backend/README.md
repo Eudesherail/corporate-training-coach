@@ -13,7 +13,7 @@ FastAPI backend for Corporate Training Coach.
 ## Run
 
 ```bash
-python -m venv .venv
+python3.11 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 uvicorn main:app --reload
@@ -23,3 +23,4 @@ Requirements:
 
 - Python 3.11
 - `bcrypt==3.2.2` is pinned for passlib compatibility in local demo environments
+- the SQLite `app/data` directory is created automatically on startup
